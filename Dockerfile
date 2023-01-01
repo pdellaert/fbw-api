@@ -9,7 +9,7 @@ COPY .eslintrc.json ./
 COPY .eslintignore ./
 
 RUN npm install -g @nestjs/cli
-RUN npm install
+RUN npm install --ignore-scripts
 
 COPY src/ src/
 RUN npm run build
